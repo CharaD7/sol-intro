@@ -12,8 +12,9 @@ contract Counter {
   }
 
   // Increase the count
-  function increment() public {
+  function increment() public returns (uint newCount){
     count ++;
+    return count;
   }
 
   // Decrease the count
