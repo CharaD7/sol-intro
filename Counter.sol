@@ -28,5 +28,9 @@ contract Counter {
     return count;
   }
 
+  function getName() public view returns(string memory currentName){
+    return name;
+  }
+
   // CRUD
 }
