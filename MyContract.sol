@@ -25,4 +25,9 @@ contract MyContract {
     return a + b;
   }
 
+  // payable => a modifier that allows receit of transactions
+  function pay() public payable {
+    balance = msg.value;
+  }
+
 }
