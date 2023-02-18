@@ -13,6 +13,10 @@ contract MyContract {
     _;
   }
 
+  constructor(string memory _name) {
+    name2 = _name;
+  }
+
   function setName(string memory _name) public {
     name = _name;
   }
