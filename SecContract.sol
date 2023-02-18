@@ -4,6 +4,12 @@ contract SecContract {
   address public origin;
   uint public amount;
 
+  struct Book {
+    string title;
+    string author;
+    bool completed;
+  }
+
   constructor() {
     contractAddress = address(this);
   }
