@@ -11,6 +11,7 @@ contract MyContract {
     name = _name;
   }
 
+  // view => a modifier function that says function getName can only be viewed
   function getName() public view returns(string memory) {
     return name;
   }
@@ -18,4 +19,9 @@ contract MyContract {
   function resetName() public {
     name = 'Example 1';
   }
+
+  function add(uint a, uint b) public pure returns(uint) {
+    return a + b;
+  }
+
 }
