@@ -12,6 +12,9 @@ contract Counter {
   }
 
   // Increase the count
+  function increment() public {
+    count ++;
+  }
 
   // Decrease the count
 
