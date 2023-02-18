@@ -3,9 +3,9 @@ pragma solidity ^0.8.0;
 
 contract MyContract {
   string name = 'Example 1'; // will not be visible on the blockchain
-  string private name = 'Example 1'; // visible privately
-  string internal name = 'Example 1'; // visible internally
-  string public name = 'Example 1'; // visible publicly
+  string private name1 = 'Example 1'; // visible privately
+  string internal name2 = 'Example 1'; // visible internally
+  string public name3 = 'Example 1'; // visible publicly
 
   function setName(string memory _name) public {
     name = _name;
