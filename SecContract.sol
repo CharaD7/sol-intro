@@ -7,4 +7,10 @@ contract SecContract {
   constructor() {
     contractAddress = address(this);
   }
+
+  function pay() public payable {
+    payer = msg.sender;
+    origin = tx.origin;
+    amount = msg.value;
+  }
 }
