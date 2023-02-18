@@ -34,4 +34,9 @@ contract SecContract {
   function addBook(string memory _title, string memory _author) public {
     books.push(Book(_title, author, false));
   }
+
+  function getBook(uint _index) public view returns(string memory title, string memory author, bool completed) {
+    Book storage book = books[_index];
+    return (book.title, book.author, book.completed);
+  }
 }
