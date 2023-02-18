@@ -11,7 +11,7 @@ contract MyContract {
     name = _name;
   }
 
-  // view => a modifier function that says function getName can only be viewed
+  // view => a modifier function that says function getName's state cannot be modified but read
   function getName() public view returns(string memory) {
     return name;
   }
@@ -20,6 +20,7 @@ contract MyContract {
     name = 'Example 1';
   }
 
+  // pure => a modifier function that says function add cannot read or modify state variables
   function add(uint a, uint b) public pure returns(uint) {
     return a + b;
   }
