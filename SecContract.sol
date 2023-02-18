@@ -27,4 +27,11 @@ contract SecContract {
       block.chainid
     );
   }
+
+  // Array of books
+  Book[] public books;
+
+  function addBook(string memory _title, string memory _author) public {
+    books.push(Book(_title, author, false));
+  }
 }
