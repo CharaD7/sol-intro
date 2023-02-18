@@ -32,5 +32,10 @@ contract Counter {
     return name;
   }
 
+  function setName(string memory _newName) public returns(string memory newName){
+    name = _newName;
+    return name;
+  }
+
   // CRUD
 }
