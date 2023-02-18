@@ -7,6 +7,11 @@ contract MyContract {
   string internal name2 = 'Example 1'; // visible internally
   string public name3 = 'Example 1'; // visible publicly
 
+  modifier onlyOwner {
+    require(msg.sender == owner, 'caller must be owner');
+    _;
+  }
+
   function setName(string memory _name) public {
     name = _name;
   }
@@ -28,6 +33,10 @@ contract MyContract {
   // payable => a modifier that allows receit of transactions
   function pay() public payable {
     balance = msg.value;
+  }
+
+  function setNewName(string memory _name1) onlyOwner public {
+    name1 = _name;
   }
 
 }
