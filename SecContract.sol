@@ -39,4 +39,10 @@ contract SecContract {
     Book storage book = books[_index];
     return (book.title, book.author, book.completed);
   }
+
+  // update completed
+  function complete(uint _index) public {
+    Book storage book = books[_index];
+    book.completed = true;
+  }
 }
