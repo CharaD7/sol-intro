@@ -13,4 +13,12 @@ contract SecContract {
     origin = tx.origin;
     amount = msg.value;
   }
+
+  function getBlockInfo() public view returns(uint, uint, uint) {
+    return(
+      block.number,
+      block.timestamp,
+      block.chainid
+    );
+  }
 }
