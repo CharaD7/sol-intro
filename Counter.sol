@@ -18,6 +18,10 @@ contract Counter {
   }
 
   // Decrease the count
+  function decrement() public returns (uint newCount){
+    count --;
+    return count;
+  }
 
   // Store / set a name
 
