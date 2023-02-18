@@ -3,9 +3,10 @@ pragma solidity ^0.8.0;
 
 contract MyContract {
   string name = 'Example 1'; // will not be visible on the blockchain
-  string private name1 = 'Example 1'; // visible privately
+  string private name1 = ''; // visible privately
   string internal name2 = 'Example 1'; // visible internally
   string public name3 = 'Example 1'; // visible publicly
+  address private owner;
 
   modifier onlyOwner {
     require(msg.sender == owner, 'caller must be owner');
