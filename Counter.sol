@@ -24,6 +24,9 @@ contract Counter {
   }
 
   // Store / set a name
+  function getCount() public view returns (uint) {
+    return count;
+  }
 
   // CRUD
 }
